@@ -1,23 +1,26 @@
-import { StyleSheet } from "react-native";
-import SwipeableList from "../../components/SwipeableList";
+import { StyleSheet, FlatList } from "react-native";
+import SwipeableList from "../../components/MatchesComponent/SwipeableList";
 import { Text, View } from "../../components/Themed";
+import NoFollowMatch from "../../components/MatchesComponent/NoFollowMatch";
 
 export default function TabOneScreen() {
   const data = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
+    "Wed 26 Apr",
+    "Yesterday",
+    "Today",
+    "Tomorrow",
+    "Sun 30 Apr",
     "Saturday",
     "Sunday",
-    "December",
     "January",
+    "February",
+    "December",
   ];
+
   return (
-    <View style={styles.container}>
-      {/* <SwipeableList data={data} /> */}
-      <Text style={styles.title}>Tab One</Text>
+    <View darkColor="#000" style={styles.container}>
+      <SwipeableList data={data} />
+      <NoFollowMatch />
     </View>
   );
 }
@@ -25,16 +28,14 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    // justifyContent: "center",
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
+  // title: {
+  //   fontSize: 20,
+  //   fontWeight: "bold",
+  // },
+  // separator: {
+  //   marginVertical: 30,
+  //   height: 1,
+  //   width: "80%",
+  // },
 });

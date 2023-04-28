@@ -1,5 +1,5 @@
 import { Link, Tabs } from "expo-router";
-import { Pressable, useColorScheme, View } from "react-native";
+import { Pressable, useColorScheme } from "react-native";
 
 import Colors from "../../constants/Colors";
 import React from "react";
@@ -9,6 +9,7 @@ import {
   FontAwesome,
   Ionicons,
 } from "@expo/vector-icons";
+import { View } from "../../components/Themed";
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>["name"];
@@ -36,6 +37,7 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: Colors[colorScheme ?? "light"].background,
         },
+        headerShadowVisible: colorScheme === "light" ? true : false,
       }}
     >
       <Tabs.Screen
@@ -46,12 +48,14 @@ export default function TabLayout() {
             <TabBarMaterialIcon name="soccer-field" color={color} />
           ),
           headerTitle: "FotMob",
+          // headerShadowVisible: false,
           headerRight: () => (
             <View
               style={{
                 flexDirection: "row-reverse",
                 alignItems: "center",
               }}
+              darkColor="rgba(255,255,255,0)"
             >
               <Pressable>
                 {({ pressed }) => (
