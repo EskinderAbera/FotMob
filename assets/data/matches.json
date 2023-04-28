@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "icon": "https://cdn.britannica.com/36/4336-050-056AC114/Flag-Spain.jpg",
+    "leagueName": "LaLiga",
+    "country": "Spain",
+    "matches": [
+      {
+        "id": 1,
+        "homeTeam": "Barcelona",
+        "homeTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
+        "awayTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png",
+        "awayTeam": "Real Madrid",
+        "kickOff": "22:00",
+        "playedMinute": ""
+      },
+      {
+        "id": 2,
+        "homeTeam": "Atletico Madrid",
+        "homeTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/1200px-Atletico_Madrid_2017_logo.svg.png",
+        "awayTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/1200px-Real_Sociedad_logo.svg.png;",
+        "awayTeam": "Real Sociedad",
+        "kickOff": "22:00",
+        "playedMinute": "90",
+        "extraMinute": "5",
+        "awayTeamScore": "3",
+        "homeTeamScore": "2"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1200px-Flag_of_England.svg.png",
+    "country": "England",
+    "leagueName": "Premier League",
+    "matches": [
+      {
+        "id": 3,
+        "homeTeam": "Man United",
+        "homeTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/640px-Manchester_United_FC_crest.svg.png",
+        "awayTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
+        "awayTeam": "Man City",
+        "kickOff": "17:00",
+        "playedMinute": "35",
+        "awayTeamScore": "0",
+        "homeTeamScore": "0"
+      },
+      {
+        "id": 4,
+        "homeTeam": "Chelsea",
+        "homeTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png",
+        "awayTeamIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/1200px-Tottenham_Hotspur.svg.png",
+        "awayTeam": "Tottenham",
+        "kickOff": "17:00",
+        "playedMinute": "FT",
+        "awayTeamScore": "2",
+        "homeTeamScore": "2"
+      }
+    ]
+  }
+]

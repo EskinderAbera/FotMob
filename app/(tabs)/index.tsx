@@ -5,6 +5,8 @@ import { Text, View } from "../../components/Themed";
 import NoFollowMatch from "../../components/MatchesComponent/NoFollowMatch";
 import { AntDesign } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
+import matches from "../../assets/data/matches.json";
+import { Image } from "expo-image";
 
 export default function TabOneScreen() {
   const data = [
@@ -23,6 +25,8 @@ export default function TabOneScreen() {
   const colorScheme = useColorScheme();
   const [hide, onHide] = React.useState(false);
 
+  const match = matches[0];
+
   return (
     <View
       darkColor="#000"
@@ -37,16 +41,35 @@ export default function TabOneScreen() {
         lightColor="rgba(236,236,236,255)"
         onTouchEnd={() => onHide(!hide)}
       >
-        <Text style={{ fontSize: 15, fontWeight: "bold" }}>
-          {hide ? "Hide all" : "Show all"}
-        </Text>
+        <Text style={styles.txt}>{hide ? "Hide all" : "Show all"}</Text>
         <AntDesign
           name={hide ? "up" : "down"}
           size={15}
           color={Colors[colorScheme ?? "light"].text}
-          style={{ marginLeft: 10, alignSelf: "flex-end" }}
-          // onPress={() => onHide(!hide)}
+          style={styles.icon}
         />
+      </View>
+      <View
+        style={{ margin: 10, marginVertical: 20 }}
+        darkColor="rgba(255,255,255,0.08)"
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            margin: 10,
+            alignItems: "center",
+            // justifyContent: "center",
+          }}
+        >
+          <Image source={{ uri: match.icon }} style={styles.leagueIcon} />
+          <Text>{`${match.country} - ${match.leagueName}`}</Text>
+          <AntDesign
+            name="up"
+            size={15}
+            color="gray"
+            style={{ marginLeft: "auto", alignSelf: "flex-end" }}
+          />
+        </View>
       </View>
     </View>
   );
@@ -57,19 +80,29 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   hideContainer: {
-    // width: "100%",
     alignSelf: "center",
-    // width: 120,
-    marginVertical: 50,
+    marginTop: 100,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 25,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    // marginHorizontal: 10,
-    // padding: 20,
-    // height: 200,
+    // backgroundColor: "red",
+  },
+  txt: {
+    fontSize: 15,
+    fontWeight: "bold",
+  },
+  icon: {
+    marginLeft: 10,
+    alignSelf: "flex-end",
+  },
+  leagueIcon: {
+    width: 20,
+    height: 20,
+    resizeMode: "contain",
+    // borderRadius: 120,
   },
   // title: {
   //   fontSize: 20,
